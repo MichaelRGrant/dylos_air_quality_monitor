@@ -60,6 +60,6 @@ with serial.Serial("/dev/ttyUSB0", 9600, timeout=1) as ser:
                 )
             )
             dylos_df.reset_index(drop=True, inplace=True)
-            # df.to_csv(PATH, index=False)
+            dylos_df.to_csv(PATH, index=False)
             print(dylos_df)
 
