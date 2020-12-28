@@ -13,7 +13,7 @@ import serial
 """
 Reads the USB port for the Dylos air quality monitor and saves the results to the dataframe at the path listed. 
 """
-PATH = "/home/pi/dylos/air_quality_2021.csv"
+PATH = "/home/pi/dylos_air_quality_monitor/air_quality_2021.csv"
 
 # check if PATH exists and if not create empty dataframe
 if os.path.exists(PATH):
