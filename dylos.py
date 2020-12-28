@@ -21,9 +21,10 @@ if os.path.exists(PATH):
 # Because this python file gets started up at boot on the pi,
 # it runs as root so the ownership of files that get created
 # automatically need to be changed to `pi` for write privileges.
+# `pi` is the default user so this should be changed to whatever your
+# username is.
 else:
     dylos_df = pd.DataFrame()
-
     uid = pwd.getpwnam("pi").pw_uid
     gid = grp.getgrnam("pi").gr_gid
     open(PATH, "w+").close()
