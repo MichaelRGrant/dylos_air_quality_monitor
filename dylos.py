@@ -30,7 +30,6 @@ else:
     open(PATH, "w+").close()
     os.chown(PATH, uid, gid)
 
-# ser = serial.Serial("/dev/ttyUSB0", 9600, timeout=1)
 with serial.Serial("/dev/ttyUSB0", 9600, timeout=1) as ser:
     while True:
         line = str(ser.readline())
@@ -62,4 +61,3 @@ with serial.Serial("/dev/ttyUSB0", 9600, timeout=1) as ser:
             dylos_df.reset_index(drop=True, inplace=True)
             dylos_df.to_csv(PATH, index=False)
             print(dylos_df)
-
